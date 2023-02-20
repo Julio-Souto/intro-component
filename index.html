@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root{
+      --color-background: hsl(0, 100%, 74%);
+      --color-button: hsl(154, 59%, 51%);
+      --color-notice: hsl(248, 32%, 49%);
+      --color-form: hsl(249, 10%, 26%);
+      --color-terms: hsl(246, 25%, 77%);
+    }
+    body{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      background-image: url(images/bg-intro-desktop.png);
+      background-color: var(--color-background);
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      color: white;
+      height: 100vh;
+      width: 100vw;
+    }
+    .container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 70%;
+    }
+    .main-header{
+      width: 50%;
+      margin-right: 1em;
+    }
+    .main-title{
+      font-size: 46px;
+      line-height: 1.2em;
+    }
+    .main-content{
+      width: 50%;
+      height: 80%;
+    }
+    .notice{
+      min-width: 0;
+      width: 100%;
+      text-align: center;
+      background-color: var(--color-notice);
+      border-radius: .5em;
+      padding: 1em;
+      margin-bottom: 1em;
+      box-shadow: 0px 7px 2px 0px rgba(0,0,0,0.3);
+    }
+    form{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 1em;
+      width: 100%;
+      height: 60%;
+      background-color: white;
+      border-radius: .5em;
+      box-shadow: 0px 7px 2px 0px rgba(0,0,0,0.3);
+    }
+    input{
+      margin: .5em 1.5em;
+      padding: 1em;
+      font-size: 16px;
+      border-radius: .3em;
+      border: 1px solid var(--color-terms);
+      font-family: 'Poppins', sans-serif;
+    }
+    input:first-child{
+      margin-top: 1em;
+    }
+    .terms-text{
+      margin-bottom: 1em;
+    }
+    input:focus{
+      outline: 2px solid var(--color-form);
+      font-weight: bold;
+    }
+    .submit{
+      border: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      background-color: var(--color-button);
+      color: white;
+      box-shadow: 0px 4px 2px 0px hsla(154, 59%, 25%, 0.712);
+    }
+    .submit:hover{
+      background-color: hsl(154, 59%, 25%);
+    }
+    .terms-text{
+      color: var(--color-terms);
+      font-size: 10px;
+      text-align: center;
+    }
+    .terms{
+      color: var(--color-background);
+      text-decoration: none;
+    }
+    @media only screen and (max-width: 1000px) {
+      input{
+        margin: .5em .5em;
+      }
+    }
+    @media only screen and (max-width: 800px) {
+      .container{
+        flex-direction: column;
+        width: 80%;
+        margin: 1em 0;
+      }
+      .main-header{
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 1em;
+        margin-left: 2em;
+      }
+      .main-title{
+        font-size: 32px;
+      }
+      .main-content{
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header class="main-header">
+      <h1 class="main-title">Learn to code by watching others</h1>
+      <p class="description">
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+        but understanding how developers think is invaluable.
+      </p>
+    </header>
+    <div class="main-content">
+      <div class="notice"><strong>Try it free 7 days</strong> then $20/mo. thereafter</div>
+      <form action="#" class="main-form">
+        <input type="text" name="first-name" id="first-name" placeholder="First Name" required>
+        <input type="text" name="last-name" id="last-name" placeholder="Last Name" required>
+        <input type="email" name="email" id="email" placeholder="Email Address" required>
+        <input type="password" name="password" id="password" placeholder="Password" required>
+        <input type="submit" value="Claim your free trial" class="submit">
+        <p class="terms-text"> By clicking the button, you are agreeing to our <a href="" class="terms">Terms and Services</a></p>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
